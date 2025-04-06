@@ -1,0 +1,46 @@
+
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="300" cy="300" r="200" stroke="#8BFE3E" stroke-width="20"/>
+  
+  <!-- Neural network nodes -->
+  <circle cx="200" cy="240" r="15" fill="#8BFE3E"/>
+  <circle cx="250" cy="180" r="15" fill="#8BFE3E"/>
+  <circle cx="300" cy="150" r="15" fill="#8BFE3E"/>
+  <circle cx="350" cy="180" r="15" fill="#8BFE3E"/>
+  <circle cx="400" cy="240" r="15" fill="#8BFE3E"/>
+  
+  <circle cx="200" cy="360" r="15" fill="#8BFE3E"/>
+  <circle cx="250" cy="420" r="15" fill="#8BFE3E"/>
+  <circle cx="300" cy="450" r="15" fill="#8BFE3E"/>
+  <circle cx="350" cy="420" r="15" fill="#8BFE3E"/>
+  <circle cx="400" cy="360" r="15" fill="#8BFE3E"/>
+  
+  <circle cx="300" cy="300" r="20" fill="#8BFE3E"/>
+  
+  <!-- Neural network connections -->
+  <line x1="200" y1="240" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="250" y1="180" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="300" y1="150" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="350" y1="180" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="400" y1="240" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  
+  <line x1="200" y1="360" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="250" y1="420" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="300" y1="450" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="350" y1="420" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  <line x1="400" y1="360" x2="300" y2="300" stroke="#8BFE3E" stroke-width="5"/>
+  
+  <!-- Interconnections between outer nodes -->
+  <line x1="200" y1="240" x2="250" y2="180" stroke="#8BFE3E" stroke-width="3"/>
+  <line x1="250" y1="180" x2="300" y2="150" stroke="#8BFE3E" stroke-width="3"/>
+  <line x1="300" y1="150" x2="350" y2="180" stroke="#8BFE3E" stroke-width="3"/>
+  <line x1="350" y1="180" x2="400" y2="240" stroke="#8BFE3E" stroke-width="3"/>
+  
+  <line x1="200" y1="360" x2="250" y2="420" stroke="#8BFE3E" stroke-width="3"/>
+  <line x1="250" y1="420" x2="300" y2="450" stroke="#8BFE3E" stroke-width="3"/>
+  <line x1="300" y1="450" x2="350" y2="420" stroke="#8BFE3E" stroke-width="3"/>
+  <line x1="350" y1="420" x2="400" y2="360" stroke="#8BFE3E" stroke-width="3"/>
+  
+  <line x1="400" y1="240" x2="400" y2="360" stroke="#8BFE3E" stroke-width="3"/>
+  <line x1="200" y1="240" x2="200" y2="360" stroke="#8BFE3E" stroke-width="3"/>
+</svg>

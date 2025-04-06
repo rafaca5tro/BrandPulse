@@ -1,0 +1,223 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 17% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 17% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 17% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 270 70% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 270 70% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 270 70% 56%;
+
+    --radius: 0.5rem;
+    --transition-duration: 0.3s;
+
+    --sidebar-background: 240 17% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 270 70% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 15% 20%;
+    --sidebar-ring: 270 70% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color var(--transition-duration) ease, 
+               border-color var(--transition-duration) ease,
+               color var(--transition-duration) ease;
+  }
+
+  body {
+    @apply bg-gray-950 text-foreground font-['Inter'];
+    background-image: radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.05) 0%, rgba(17, 24, 39, 0.8) 100%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Inter'] tracking-tight text-gray-100 font-semibold;
+  }
+  
+  p {
+    @apply leading-relaxed text-gray-300;
+  }
+
+  a {
+    @apply text-purple-400 hover:text-purple-300 transition-colors;
+  }
+
+  /* Elegant card design */
+  .neo-card {
+    @apply bg-gray-900/95 border border-gray-800/50 shadow-xl rounded-xl;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(147, 51, 234, 0.05);
+  }
+
+  /* Add elegant glass effect card */
+  .glass-card {
+    @apply bg-gray-900/70 backdrop-blur-sm border border-gray-800/50 shadow-xl rounded-xl;
+  }
+
+  /* Prevent light theme flicker on load */
+  html.dark {
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  /* Custom dark theme components */
+  .dark-gradient-card {
+    @apply bg-gradient-to-br from-gray-900 to-gray-900/90 backdrop-blur-sm shadow-xl border border-gray-800/40;
+  }
+
+  .accent-border {
+    @apply border border-purple-900/50;
+  }
+
+  .accent-glow {
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.15);
+  }
+
+  .dark-glass {
+    @apply bg-gray-900/70 backdrop-blur-md border border-gray-800/40;
+  }
+  
+  .dark-card {
+    @apply bg-gray-900 border border-gray-800 shadow-lg;
+  }
+  
+  .dark-hover {
+    @apply hover:bg-gray-800/50 transition-colors duration-200;
+  }
+
+  .dark-input {
+    @apply bg-gray-800/50 border border-gray-700/50 text-gray-200 placeholder:text-gray-500 focus:ring-purple-500 focus:border-purple-500;
+  }
+
+  .dark-button-primary {
+    @apply bg-purple-600 hover:bg-purple-700 text-white font-medium transition-all;
+  }
+
+  .dark-button-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700/50 font-medium transition-all;
+  }
+
+  .dashboard-grid {
+    @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .dashboard-grid-2col {
+    @apply grid gap-6 md:grid-cols-2;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(17, 24, 39, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 51, 234, 0.7);
+}
+
+/* Fix for the SocialMediaProfile.tsx error */
+.profile-avatar {
+  @apply bg-gray-800 rounded-full flex items-center justify-center overflow-hidden border-2 border-gray-700;
+}
+
+.profile-avatar-fallback {
+  @apply bg-gradient-to-br from-purple-900 to-indigo-900 flex items-center justify-center text-gray-100;
+}
+
+/* Enhance chart readability in dark mode */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  @apply stroke-gray-800;
+}
+
+.recharts-text {
+  @apply fill-gray-400;
+}
+
+.recharts-tooltip-wrapper {
+  @apply !bg-gray-900/95 !border !border-gray-700 !text-gray-200;
+}
+
+.recharts-default-tooltip {
+  @apply !bg-gray-900/95 !border !border-gray-700 !text-gray-200;
+}
+
+.recharts-tooltip-label {
+  @apply !text-gray-200;
+}
+
+.recharts-active-dot {
+  @apply fill-purple-500;
+}
